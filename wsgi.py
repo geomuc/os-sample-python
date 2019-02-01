@@ -1,9 +1,22 @@
 from flask import Flask
-application = Flask(__name__)
+app = Flask(__name__)
 
-@application.route("/")
+@app.route("/")
 def hello():
-    return "Guten Morgen!"
+    return "Auskunft Blutgruppen für Vampire!"
+
+@app.route('/auskunft')
+def auskunft():
+    user = {'person': 'Miguel'}
+    return '''
+<html>
+    <head>
+        <title>Blutgruppenauskunft</title>
+    </head>
+    <body>
+        <h1>Hello, ''' + user['person'] + '''!</h1>
+    </body>
+</html>'''
 
 if __name__ == "__main__":
-    application.run()
+    app.run()
