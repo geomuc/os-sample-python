@@ -1,11 +1,11 @@
 from flask import Flask
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route("/")
+@application.route("/")
 def hello():
     return "Auskunft Blutgruppen für Vampire!"
 
-@app.route('/auskunft')
+@application.route('/auskunft')
 def auskunft():
     user = {'person': 'Miguel'}
     return '''
@@ -19,4 +19,4 @@ def auskunft():
 </html>'''
 
 if __name__ == "__main__":
-    app.run()
+    application.run()
