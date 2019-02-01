@@ -9,7 +9,7 @@ def hello():
 @application.route('/auskunft')
 def auskunft():
     name= "Markus"
-    return render_template('auskunft.html', name=name)
+    return render_template('auskunft.html')
 
 if __name__ == "__main__":
     application.run()
