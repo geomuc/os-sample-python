@@ -8,8 +8,8 @@ def hello():
 
 @application.route('/auskunft')
 def auskunft():
-    person = {'name': 'Markus'}
-    return render_template('templates/auskunft.html', person=person)
+    name= "Markus"
+    return render_template('auskunft.html', name=name)
 
 if __name__ == "__main__":
     application.run()
